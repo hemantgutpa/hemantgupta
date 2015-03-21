@@ -1,0 +1,74 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top header_nav">
+    <%=render 'header'%>    
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">Welcome To Our Printing Market!</div>
+            <div class="intro-heading">It's Nice To Meet You</div>
+            <!-- <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
+        </div>
+    </div>
+</header>
+<!-- cards -->
+<section id="cards" class="bg-light-gray">
+    <%=render 'cards'%>    
+</section>
+<!-- Services Section -->
+<section id="services" class="bg-light-gray">
+    <%=render 'services'%>    
+</section>
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="bg-light-gray">
+    <%=render 'portfolio'%>    
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-light-gray">
+    <%=render 'about'%>  
+</section>
+
+<!-- Team Section -->
+<section id="team" class="bg-light-gray">
+    <%=render 'team'%>    
+</section>
+
+<section id="contact">
+    <%=render 'contact'%>    
+</section>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(25.916667000000000000,78.566667000000050000);
+  var mapOptions = {
+    zoom: 4,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Navneet Offset Printers'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <div id="map-canvas"></div>
+<footer>
+    <%=render 'footer'%>    
+</footer>
