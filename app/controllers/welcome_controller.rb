@@ -3,6 +3,4 @@ class WelcomeController < ApplicationController
   end
   def new_index
   end
-  def edit
-  end
 end
